@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      My Family
+      </title>
+<style>
+h1{
+  text-align:center;
+  font-size:50px;
+  color: blueviolet;
+}
+h2{
+    font-size: 30px;
+    color: chocolate;
+}
+body{
+  text-align:center;
+}
+</style>
+    </head>
+    <body>
+          <h1>
+        Family Album
+        </h1>
+      <div>
+        <img id="album" src="album.jpg" height ="500">
+        </div>
+       <div>
+       <h2 id="name"></h2>
+       </div>
+      <div>
+      <button onclick="nextslide()">
+        NEXT
+         </button>
+        </div>
+  <script>
+  var images =  ["album.jpg","dad.png","woman.png","girl.png"];
+var names = ["My Family","K.Ashok","Rachel Ashok","Isabella Rose"];
+ var i = 0;
+ var j = 0;     
+function nextslide(){
+  document.getElementById("album").src = images[i];
+  document.getElementById("name").innerHTML = names[j];
+  i++;
+  j++;
+  if (i==4)
+{i=0;
+ j=0;}
+}
+</script>
+      </body>
+  </html>
+
+
